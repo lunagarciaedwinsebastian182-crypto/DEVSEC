@@ -2,14 +2,14 @@
 
 **Fecha:** 2026-08-31  
 **Versión:** 1.0  
-**Autores:** [Nombre del Alumno / Equipo]
+**Autores:** [Edwin_luna]
 
 ## 1. Diagrama de Flujo de Datos (DFD) con Mermaid.js
 
 A continuación se muestra la arquitectura lógica del sistema, los flujos de datos y las fronteras de confianza (Trust Boundaries) que separan las zonas seguras de las inseguras.
 
 ```mermaid
-graph TD
+flowchart TD
     %% Definición de Estilos y Fronteras de Confianza
     classDef internet fill:#f9f,stroke:#333,stroke-width:2px;
     classDef secureZone fill:#bbf,stroke:#333,stroke-width:2px;
@@ -22,11 +22,11 @@ graph TD
     API -->|"3. Valida Token"| Auth["Servicio de Auth Externo (OAuth)"]
     
     %% Fronteras de Confianza
-    subgraph Frontera de Internet (Insegura)
+    subgraph SG1["Frontera de Internet (Insegura)"]
         Usuario
     end
     
-    subgraph Red Interna de la Empresa (Zona Segura)
+    subgraph SG2["Red Interna de la Empresa (Zona Segura)"]
         API
         BD
         Auth
