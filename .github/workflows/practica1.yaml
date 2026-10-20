@@ -1,7 +1,7 @@
 name: Hola Mundo Manual
 
 on:
-  workflow_dispatch: # Permite ejecutar el workflow manualmente desde GitHub
+  workflow_dispatch: 
 
 jobs:
   saludo:
